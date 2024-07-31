@@ -1,0 +1,11 @@
+# my scripts
+
+function split(){
+echo $1 | awk -F/ '{
+path=""
+for (i=1; i<=NF; i++) {
+path = path $i "/"
+print path
+}
+}'
+}
